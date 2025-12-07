@@ -1,4 +1,4 @@
-import Home from "./views/HomePage.jsx";
+import Home from "./views/HomePage";
 
 function App() {
   return <Home />;
