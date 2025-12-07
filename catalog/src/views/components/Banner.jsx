@@ -1,6 +1,6 @@
 export default function Banner() {
   return (
-    <section className="bg-[var(--dark-blue)] px-4 sm:px-8 md:px-12 py-16 relative">
+    <section className="bg-[var(--dark-blue)] pt-28 px-4 sm:px-8 md:px-12 py-16 relative">
 
       <div className="flex flex-col md:flex-row items-start justify-between gap-6 md:gap:12">
 

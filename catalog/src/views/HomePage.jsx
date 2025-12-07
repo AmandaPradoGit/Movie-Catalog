@@ -5,7 +5,7 @@ import Carousel from "../views/components/Carousel";
 export default function Home() {
   return (
     <div className="bg-black min-h-screen">
-      {/*<Header />*/}
+      <Header />
       <Banner />
       {/* <Carousel titulo="Em alta" filmes={filmesDestaque} /> */}
     </div>
