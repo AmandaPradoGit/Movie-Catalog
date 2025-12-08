@@ -2,7 +2,7 @@ export default function MovieCard({ title, year, poster }) {
   return (
     <div className="cursor-pointer">
       <img
-        src={poster}
+        src={`https://image.tmdb.org/t/p/w300${poster}`}
         alt={title}
         className="w-[152px] h-56 object-cover rounded-xl translate-y-1"
       />
