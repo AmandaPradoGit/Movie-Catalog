@@ -7,7 +7,7 @@ export default function Home() {
     <div className="bg-black min-h-screen">
       <Header />
       <Banner />
-      {/* <Carousel titulo="Em alta" filmes={filmesDestaque} /> */}
+      <Carousel />
     </div>
   );
 }
