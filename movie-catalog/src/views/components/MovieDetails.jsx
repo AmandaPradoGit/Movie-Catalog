@@ -9,7 +9,6 @@ export default function MovieDetails({ movie }) {
     release_date,
     poster_path,
     vote_average,
-    age_rating,
   } = movie;
 
   return (
@@ -23,10 +22,6 @@ export default function MovieDetails({ movie }) {
       <div className="flex flex-col justify-between">
         <div>
           <h1 className="text-4xl font-bold mb-2">{title}</h1>
-
-          <p className="text-gray-300 mb-2">
-            <strong>Classificação:</strong> {age_rating}
-          </p>
 
           <p className="text-gray-300 mb-2">
             <strong>Lançamento:</strong> {release_date}

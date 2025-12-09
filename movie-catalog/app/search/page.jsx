@@ -3,6 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import { useSearchMovies } from "@/src/hooks/useSearchMovies";
 import MovieGrid from "@/src/views/components/MovieGrid";
+import Header from "@/src/views/components/Header";
 
 export default function SearchPage() {
   const searchParams = useSearchParams();
@@ -17,6 +18,7 @@ export default function SearchPage() {
 
   return (
     <div className="px-4 md:px-12 lg:px-28 mt-32">
+      <Header />
       <h1 className="text-white text-3xl font-bold mb-6">Resultados</h1>
       <MovieGrid movies={data} />
     </div>
