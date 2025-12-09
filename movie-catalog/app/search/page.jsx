@@ -16,7 +16,7 @@ export default function SearchPage() {
   if (data.length === 0) return <p className="text-white mt-32 text-center">Nenhum resultado encontrado.</p>;
 
   return (
-    <div className="px-28 mt-32">
+    <div className="px-4 md:px-12 lg:px-28 mt-32">
       <h1 className="text-white text-3xl font-bold mb-6">Resultados</h1>
       <MovieGrid movies={data} />
     </div>
