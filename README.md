@@ -3,6 +3,10 @@
 Este projeto exibe filmes da API TMDB com React.js + Next.js + TailwindCSS + TanStack.
 
 ---
+## Funcionalidades
+- Tela inicial com listagem de filmes em alta e melhores avaliados
+- Tela de exibição de detalhes dos filmes e sugestão de semelhantes
+- Tela de busca de filmes
 
 ## Pré-requisitos
 
