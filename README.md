@@ -16,7 +16,10 @@ Antes de começar, instale:
 
   Tailwind:<br>
 - npm install -D tailwindcss postcss autoprefixer<br>
-- npx tailwindcss init -p 
+- npx tailwindcss init -p<br><br>
+  
+  TanStack Query<br>
+- npm install @tanstack/react-query
 
 
 ## Configurar variáveis de ambiente
