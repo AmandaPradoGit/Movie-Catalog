@@ -8,3 +8,6 @@
   --light-brown: #b0ae8a;
   --dark-gray: #0c0c0c;
 }
+body{
+  background-color: var(--dark-gray);
+}
