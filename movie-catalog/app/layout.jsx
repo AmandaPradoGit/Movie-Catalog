@@ -1,4 +1,5 @@
 import "./globals.css";
+import QueryProvider from "@/src/providers/QueryProvider";
 
 export const metadata = {
   title: "Movie Catalog",
@@ -8,7 +9,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt">
-      <body>{children}</body>
+      <body>
+        <QueryProvider>
+          {children}
+        </QueryProvider>
+      </body>
     </html>
   );
 }

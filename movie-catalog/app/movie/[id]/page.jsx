@@ -1,21 +1,18 @@
+"use client";
+
+import { use } from "react";
 import MovieView from "@/src/views/MovieView";
-import { getMovieDetails, getSimilarMovies } from "@/src/lib/api";
+import { useMovieDetails } from "@/src/hooks/useMovieDetails";
 
+export default function MoviePage(props) {
+  const { id } = use(props.params); 
 
-export default async function MoviePage(props) {
-  const params = await props.params; 
-  console.log("PARAMS:", params);
+  const { data: movie, isLoading, error } = useMovieDetails(id);
 
-  console.log("ID:", params.id);
-
-  const movieDetails = await getMovieDetails(params.id);
-  const similar = await getSimilarMovies(params.id);
-
-  const movie = {
-    ...movieDetails,
-    similar,
-  };
-
+  if (isLoading) return <p>Carregando...</p>;
+  if (error) return <p>Erro ao carregar filme.</p>;
 
   return <MovieView movie={movie} />;
 }
+
+
