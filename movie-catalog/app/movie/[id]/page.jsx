@@ -1,12 +1,21 @@
 import MovieView from "@/src/views/MovieView";
-import { getMovieDetails } from "@/src/lib/api";
+import { getMovieDetails, getSimilarMovies } from "@/src/lib/api";
+
 
 export default async function MoviePage(props) {
   const params = await props.params; 
-  
+  console.log("PARAMS:", params);
+
   console.log("ID:", params.id);
 
-  const movie = await getMovieDetails(params.id);
+  const movieDetails = await getMovieDetails(params.id);
+  const similar = await getSimilarMovies(params.id);
+
+  const movie = {
+    ...movieDetails,
+    similar,
+  };
+
 
   return <MovieView movie={movie} />;
 }

@@ -19,3 +19,26 @@ export async function getMovieDetails(id) {
 
   return res.json();
 }
+export async function getSimilarMovies(id) {
+  const res = await fetch(
+    `${BASE_URL}/movie/${id}/similar?api_key=${API_KEY}&language=pt-BR`
+  );
+
+  if (!res.ok) {
+    throw new Error("Erro ao buscar similares");
+  }
+
+  const data = await res.json();
+  return data.results;
+}
+
+export async function getMovieWithSimilar(id) {
+  const movie = await getMovieDetails(id);
+  const similar = await getSimilarMovies(id);
+
+  return {
+    ...movie,
+    similar,
+  };
+}
+
