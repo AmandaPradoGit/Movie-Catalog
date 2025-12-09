@@ -10,3 +10,12 @@ export async function getTrendingMovies() {
 
     return res.json();
 }
+export async function getMovieDetails(id) {
+  const res = await fetch(`${BASE_URL}/movie/${id}?api_key=${API_KEY}`);
+
+  if (!res.ok) {
+    throw new Error("Erro ao buscar detalhes do filme");
+  }
+
+  return res.json();
+}

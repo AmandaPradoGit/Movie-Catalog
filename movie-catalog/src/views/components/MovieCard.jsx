@@ -1,6 +1,13 @@
-export default function MovieCard({ title, year, poster }) {
+"use client";
+import { useRouter } from "next/navigation";
+
+export default function MovieCard({ id, title, year, poster }) {
+  const router = useRouter();
+
   return (
-    <div className="cursor-pointer">
+    <div className="cursor-pointer"
+      onClick={() => router.push(`/movie/${id}`)}
+      >
       <img
         src={`https://image.tmdb.org/t/p/w300${poster}`}
         alt={title}
