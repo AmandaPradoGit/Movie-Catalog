@@ -53,5 +53,19 @@ export async function searchMovies(query) {
   const data = await res.json();
   return data.results;
 }
+export async function getTopRatedMovies() {
+  const res = await fetch(
+    `${BASE_URL}/movie/top_rated?api_key=${API_KEY}&language=pt-BR`
+  );
+
+  if (!res.ok) {
+    throw new Error("Erro ao buscar filmes melhores avaliados");
+  }
+
+  const data = await res.json();
+  return data.results;
+}
+
+
 
 
