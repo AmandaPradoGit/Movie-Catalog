@@ -41,4 +41,17 @@ export async function getMovieWithSimilar(id) {
     similar,
   };
 }
+export async function searchMovies(query) {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=pt-BR&query=${encodeURIComponent(query)}`
+  );
+
+  if (!res.ok) {
+    throw new Error("Erro ao buscar filmes");
+  }
+
+  const data = await res.json();
+  return data.results;
+}
+
 
